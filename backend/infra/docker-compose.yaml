@@ -2,7 +2,6 @@ version: '3.4'
 
 services:
   php:
-    user: ${UID}
     container_name: "php-fpm"
     build:
       context: ./php
@@ -10,10 +9,9 @@ services:
       - APP_ENV=${APP_ENV}
       - APP_SECRET=${APP_SECRET}
     volumes:
-      - ${APP_FOLDER}:/var/www
+      - ${APP_FOLDER}:/var/www:rw,cached
 
   nginx:
-    user: ${UID}
     container_name: "nginx"
     build:
       context: ./nginx

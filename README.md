@@ -2,6 +2,11 @@
 
 Launch with docker-compose up -d --build
 
+Command used to create symfony project : 
+composer create-project symfony/skeleton:"6.1.*" .
+
+TODO: use current user rights on docker
+TODO: install xdebug
 
 ## Troubleshooting
 
