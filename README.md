@@ -1,12 +1,17 @@
 ## Instructions
 
-Launch with docker-compose up -d --build
+Launch with
+`CURRENT_UID=$(id -u):$(id -g) docker-compose up`
 
 Command used to create symfony project : 
 composer create-project symfony/skeleton:"6.1.*" .
 
-TODO: use current user rights on docker
+TODO: move docker-compose to use same .env file as symfony ?
 TODO: install xdebug
+TODO: create makefile
+    -launch container with UID
+    -make sh
+    -launch some commands on container ? like make:entity
 
 ## Troubleshooting
 

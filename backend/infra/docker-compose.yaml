@@ -2,6 +2,7 @@ version: '3.4'
 
 services:
   php:
+    user: ${CURRENT_UID}
     container_name: "php-fpm"
     build:
       context: ./php
@@ -10,6 +11,24 @@ services:
       - APP_SECRET=${APP_SECRET}
     volumes:
       - ${APP_FOLDER}:/var/www:rw,cached
+
+  mysql:
+    container_name: 'mysql'
+    image: 'mysql:latest'
+    environment:
+      - MYSQL_DATABASE=db
+      - MYSQL_USER=db
+      - MYSQL_PASSWORD=db
+      - MYSQL_ROOT_PASSWORD=db
+    volumes:
+      # check if really useful, if so understand why, read doc on volumes
+      - mysql-data:/var/lib/mysql:rw
+    ports:
+      # To allow the host machine to access the ports below, modify the lines below.
+      # For example, to allow the host to connect to port 3306 on the container, you would change
+      # "3306" to "3306:3306". Where the first port is exposed to the host and the second is the container port.
+      # See https://docs.docker.com/compose/compose-file/compose-file-v3/#ports for more information.
+      - '3306'
 
   nginx:
     container_name: "nginx"
@@ -22,3 +41,6 @@ services:
       - php
     ports:
       - "8000:80"
+
+volumes:
+  mysql-data:

@@ -1,4 +1,4 @@
-FROM php:8.1-fpm-alpine
+FROM php:8.1-fpm-alpine as php
 RUN apk --update --no-cache add git
 RUN docker-php-ext-install pdo_mysql
 WORKDIR /var/www
