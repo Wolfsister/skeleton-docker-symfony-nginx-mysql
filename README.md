@@ -1,17 +1,17 @@
 ## Instructions
 
-Launch with
-`CURRENT_UID=$(id -u):$(id -g) docker-compose up`
+Launch project with\
+`CURRENT_UID=$(id -u):$(id -g) docker-compose up`\
+OR\
+`make up`
 
-Command used to create symfony project : 
-composer create-project symfony/skeleton:"6.1.*" .
+Command used to create symfony project\
+`composer create-project symfony/skeleton:"6.1.*" .`
 
-TODO: move docker-compose to use same .env file as symfony ?
-TODO: install xdebug
-TODO: create makefile
-    -launch container with UID
-    -make sh
-    -launch some commands on container ? like make:entity
+TODO: install xdebug\
+TODO: install at root, without backend directory ?\
+TODO: check on windows and mac\
+TODO: better Readme
 
 ## Troubleshooting
 
