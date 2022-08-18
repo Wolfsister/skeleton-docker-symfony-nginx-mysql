@@ -11,6 +11,8 @@ services:
       - APP_SECRET=${APP_SECRET}
     volumes:
       - ${APP_FOLDER}:/var/www:rw,cached
+    extra_hosts:
+      - host.docker.internal:host-gateway
 
   mysql:
     container_name: "mysql"
