@@ -23,8 +23,9 @@ In File->Settings->Php->Xdebug, you should only check "Resolve breakpoints ... i
 
 Make sure the "phone" logo on top-right corner is listening to connections and you should be all set !
 
+
+TODO: install csfix/phpstan
 TODO: install at root, without backend directory ?\
-TODO: check on windows and mac\
 TODO: better Readme
 
 ## Troubleshooting
