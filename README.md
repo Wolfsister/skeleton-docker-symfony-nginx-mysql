@@ -23,7 +23,7 @@ In File->Settings->Php->Xdebug, you should only check "Resolve breakpoints ... i
 
 Make sure the "phone" logo on top-right corner is listening to connections and you should be all set !
 
-
+TODO: remove backend folder, to avoid confusion with container from other docker install in same PC
 TODO: install csfix/phpstan
 TODO: install at root, without backend directory ?\
 TODO: better Readme
